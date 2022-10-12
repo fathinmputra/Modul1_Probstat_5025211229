@@ -205,11 +205,9 @@ dengan 100 Data Random", col = "green")
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195269274-f99413bf-09a9-41d0-90d8-e62bc83361ba.png">
 
 
-**4c.)** Histogram dari Distribusi Chi-Square dengan 100 data random.
+**4c.)** Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.
   
-  Soal ini menerapkan konsep distribusi Chi-Square. Digunakan rumus rataan distribusi Chi-Sqyare (μ), yaitu `μ = `v` dan rumus varians distribusi Chi-Square, yaitu (σ²) `σ² = 2*v` dimana `v` merupakan derajat kebebasan. Sehingga, didapatkan hasil `μ = 4` dan `σ² =3,2`. 
-  
-Soal ini menerapkan konsep distribusi binomial. Digunakan rumus rataan distribusi binomial (μ), yaitu `μ = n*p` dan rumus varians distribusi binomial (σ²) `σ² = n*p*(1-p)` dimana `n` merupakan keseluruhan total pasien dan `p` merupakan peluang dari kejadian yang diinginkan. Sehingga, didapatkan hasil `μ = 10` dan `σ² =20`. 
+  Soal ini menerapkan konsep distribusi Chi-Square. Digunakan rumus rataan distribusi Chi-Square (μ), yaitu `μ = `v` dan rumus varians distribusi Chi-Square, yaitu (σ²) `σ² = 2*v` dimana `v` merupakan derajat kebebasan. Sehingga, didapatkan hasil `μ = 4` dan `σ² =3,2`. 
 
 ```
 # Penyelesaian No.4c
@@ -223,5 +221,86 @@ paste("σ² =", varians))
 ```
 <img width="480" alt="image" src="https://user-images.githubusercontent.com/103252800/195270170-fa964680-7300-45c2-bfee-1310507d6d04.png">
 
+
+## NO. 5
+> **Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan:** 
+  
+  **5a.)** Fungsi Probabilitas dari Distribusi Exponensial.
+  
+  Soal ini menerapkan konsep distribusi Eksponensial. Fungsi yang digunakan, yaitu `dexp(x, rate, log = FALSE)` dimana `x` merupakan banyak data dan `rate` merupakan parameter yang nilainya sama dengan lambda(λ). Maka, didapatkan hasil `0.149361205103592` sebagai Probabilitas dari Distribusi Exponensial.
+  
+```
+# Penyelesaian No.5a
+x = 1
+lambda = 3
+rate = lambda
+Probabilitas = dexp(x, rate, log = FALSE)
+paste("Probabilitas =", Probabilitas)
+```
+<img width="480" alt="image" src="https://user-images.githubusercontent.com/103252800/195273109-5a0d6482-7ae2-451e-998f-985dc955b41f.png">
+
+ **5b.)** Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random.
+  
+  Soal ini menerapkan konsep distribusi Eksponensial. Fungsi yang digunakan, yaitu `hist(rexp(n, rate))` dimana `n` merupakan banyak bilangan random dan `rate` merupakan parameter yang nilainya sama dengan lambda(λ). Maka, akan ditampilkan Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random.
+  
+```
+# Penyelesaian No.5b
+#10 Bilangan Random
+lambda = 3
+rate = lambda
+hist(rexp(10, rate), main = "Distribusi Exponensial
+10 Bilangan Random")
+```
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195274824-3207cfa8-5ef9-43f6-a55e-9dac418be104.png">
+
+```
+#100 Bilangan Random
+lambda = 3
+rate = lambda
+hist(rexp(100, rate), main ="Distribusi Exponential
+100 Bilangan Random")
+```
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195274972-fa867013-c487-4376-8d43-191901b7edac.png">
+
+```
+#1000 Bilangan Random
+lambda = 3
+rate = lambda
+hist(rexp(1000, rate), main ="Distribusi Exponential
+1000 Bilangan Random")
+```
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195275123-81fe1c71-6a25-4c58-aaab-62c744e8a4f4.png">
+
+```
+#10000 Bilangan Random
+lambda = 3
+rate = lambda
+hist(rexp(10000, rate), main ="Distribusi Exponential
+10000 Bilangan Random")
+```
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195275270-bab829bd-5bbd-4369-a275-6bd17938ca52.png">
+
+
+ **5c.)** Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
+<br>Petunjuk: 
+<br>Gunakan set.seed(1)
+<br>Gunakan fungsi bawaan R
+  
+   Soal ini menerapkan konsep distribusi Chi-Square. Digunakan rumus rataan distribusi Eksponensial (μ), yaitu menggunakan fungsi `mean(rexp(n, rate))` dan untuk rumus varians distribusi Eksponensial, yaitu menggunakan fungsi `(sd(rexp(n, rate)))` dimana n merupakan bilangan random dan rate merupakan parameter yang nilainya sama dengan lambda(λ). Sehingga, didapatkan hasil `μ = 4` dan `σ² =3,2`. 
+  
+```
+# Penyelesaian No.5c
+n = 100
+lambda = 3
+rate = lambda
+set.seed(1)
+#Nilai Rataan Distribusi Eksponensial (μ) :
+rataan = mean(rexp(n, rate))
+paste("μ =", rataan)
+#Nilai Varians Distribusi Eksponensial (σ²) :
+varians = (sd(rexp(n, rate))) ^ 2
+paste("σ² =", varians)
+```
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/103252800/195278458-3bac7fbe-a2dc-4fda-84b9-b9302ca5d7f3.png">
 
 
