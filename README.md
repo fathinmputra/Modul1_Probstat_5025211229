@@ -8,7 +8,7 @@
 ## NO. 1
 > **Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya.** 
   
-  **1a.)** Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi  sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi ? (distribusi Geometrik)
+  **1a.)** **Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi  sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi ? (distribusi Geometrik)**
   
   Soal ini menerapkan konsep distribusi geometrik. Fungsi yang digunakan, yaitu `dgeom(x, p)` dimana `x` merupakan banyaknya orang yang tidak menghadiri acara vaksinasi dan `p` adalah peluang dari kejadian yang diinginkan. Maka, didapatkan hasil `0.1024` sebagai peluang sebelum keberhasilan pertama.
   
@@ -21,7 +21,7 @@ paste("peluang = ", peluang)
 ```
 <img width="480" alt="image" src="https://user-images.githubusercontent.com/103252800/195225919-6abc20bf-3902-4220-a68d-f3137f50d5e7.png">
 
-  **1b.)** Mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )
+  **1b.)** **Mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )**
   
   Soal ini menerapkan konsep distribusi geometrik. Fungsi yang digunakan, yaitu `mean(rgeom(n,p) == x` dimana `n` merupakan banyaknya data random, `p` adalah peluang dari kejadian yang diinginkan, dan `x` merupakan banyaknya orang yang tidak menghadiri acara vaksinasi. Maka, didapatkan hasil yang berubah-ubah sesuai perubahan variabel random.
   
@@ -34,11 +34,11 @@ paste("mean = ", mean)
 ```
 <img width="477" alt="image" src="https://user-images.githubusercontent.com/103252800/195223264-da19e0e4-15b7-4696-9ef5-ef9a06e7d94d.png">
 
-  **1c.)** Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
+  **1c.)** **Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?**
   
   Poin 1a menunjukkan peluang distribusi geometrik, sedangkan poin 1b menunjukkan mean peluang distribusi geometrik dengan data random. Jika dibandingkan, hasil yang didapatkan dari poin 1a dan poin 1b berbeda. Hasil dari poin 1a selalu tetap, yaitu 0.1024. Sedangkan, hasil yang didapatkan pada poin 1b tidak tetap dan selalu berubah-ubah karena pada poin b menggunakan variabel random, sehingga hasilnya mengikuti rata-rata berdasarkan perubahan variabel random tersebut. Namun, sempat ditemukan juga hasil 1a dan 1b yang nilainya saling mendekati.
   
-   **1d.)** Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
+   **1d.)** **Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama**
   
   Soal ini menerapkan konsep distribusi geometrik. Fungsi yang digunakan, yaitu `hist(rgeom(n, p))` dimana `n` merupakan banyaknya data random dan `p` merupakan peluang dari kejadian tersebut. 
   
@@ -52,7 +52,7 @@ Peluang Gagal Sebelum Sukses Pertama', col = "green")
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195231255-07370a4c-0fc1-4ac6-ab7c-a3a485eefb39.png">
 
 
-  **1e.)** Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
+  **1e.)** **Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.**
   
   Soal ini menerapkan konsep distribusi geometrik. Digunakan rumus rataan distribusi geometrik (μ), yaitu `μ = 1/p` dan rumus varians distribusi geometrik (σ²) `σ² = (1-p)/p^2` dimana `p` merupakan peluang dari kejadian yang diinginkan. Sehingga, didapatkan hasil `μ = 5` dan `σ² =20`. 
   
@@ -71,10 +71,12 @@ paste("σ² =", varians)
 <img width="479" alt="image" src="https://user-images.githubusercontent.com/103252800/195224723-ddcc41a1-87cb-4cb5-9702-8cd11549a0d3.png">
 
 
+
+
 ## NO. 2
 > **Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :** 
   
-  **2a.)** Peluang terdapat 4 pasien yang sembuh.
+  **2a.)** **Peluang terdapat 4 pasien yang sembuh.**
   
   Soal ini menerapkan konsep distribusi binomial. Fungsi yang digunakan, yaitu `dbinom(x, n, p)` dimana `x` merupakan banyak pasien yang sembuh, `n` merupakan total keseluruhan pasien, dan `p` adalah peluang dari kejadian yang diinginkan. Maka, didapatkan hasil `0.218199401946101` sebagai sebagai peluang 4 pasien yang sembuh.
   
@@ -89,7 +91,7 @@ paste("peluang =", peluang)
 <img width="480" alt="image" src="https://user-images.githubusercontent.com/103252800/195226996-bfa5d132-28be-40b9-8d08-8a411261a0a3.png">
 
 
-  **2b.)** Gambarkan grafik histogram berdasarkan kasus tersebut.
+  **2b.)** **Gambarkan grafik histogram berdasarkan kasus tersebut.**
 
   Soal ini menerapkan konsep distribusi binomial. Fungsi yang digunakan, yaitu `hist(rbinom(x, n, p)` dimana `x` merupakan banyak pasien yang sembuh, `n` merupakan total keseluruhan pasien, dan `p` adalah peluang dari kejadian yang diinginkan. Sehingga menampilkan Histogram Distribusi Binomial Peluang Sembuh Pasien Penderita Covid19,
   
@@ -104,8 +106,8 @@ Peluang Sembuh Pasien Penderita Covid19", col = "green")
 <img width="959" alt="image" src="https://user-images.githubusercontent.com/103252800/195227687-f13ab8e7-4dc4-41a9-aa1f-95ca48d7cbff.png">
 
 
-  **2c.)** Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Binomial.
-.
+  **2c.)** **Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Binomial.**
+
   Soal ini menerapkan konsep distribusi binomial. Digunakan rumus rataan distribusi binomial (μ), yaitu `μ = n*p` dan rumus varians distribusi binomial (σ²) `σ² = n*p*(1-p)` dimana `n` merupakan keseluruhan total pasien dan `p` merupakan peluang dari kejadian yang diinginkan. Sehingga, didapatkan hasil `μ = 4` dan `σ² =3,2`. 
   
   
@@ -123,10 +125,12 @@ paste("σ² =", varians)
 <img width="478" alt="image" src="https://user-images.githubusercontent.com/103252800/195228488-bfbe3c24-5b9e-46fe-94a0-ce0a1040c483.png">
 
 
+
+
 ## NO. 3
 > **Diketahui data dari  sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)** 
   
-  **3a.)** Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
+  **3a.)** **Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?**
   
   Soal ini menerapkan konsep distribusi Poisson. Fungsi yang digunakan, yaitu `dpois(x, lambda)` dimana `x` merupakan banyak bayi yang akan lahir, dan `lambda(λ)` adalah rata-rata historis bayi yang lahir di rumah sakit. Maka, didapatkan hasil `0.128120143864584` sebagai peluang 6 bayi akan lahir di rumah sakit.
   
@@ -139,7 +143,7 @@ paste("peluang =", peluang)
 ```
 <img width="478" alt="image" src="https://user-images.githubusercontent.com/103252800/195229128-27edddb7-139b-42db-b2e4-cd9313694994.png">
 
- **3b.)** Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
+ **3b.)** **Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?**
   
   Soal ini menerapkan konsep distribusi Poisson. Fungsi yang digunakan, yaitu `hist(rpois(n,lambda)` dimana `n` merupakan banyak nya hari dalam satu tahun dan `lambda(λ)` adalah rata-rata historis bayi yang lahir di rumah sakit. Maka, akan ditampilkan histogram distribusi poisson Peluang Kelahiran Bayi Akan Lahir di Rumah Sakit Selam Setahun(365 hari).
   
@@ -152,14 +156,13 @@ Peluang Kelahiran Bayi Akan Lahir di Rumah Sakit Selam Setahun(365 hari)", label
 ```
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195230232-c9843e5f-0128-4c03-a02e-e50e67dcb48b.png">
 
- **3c.)** dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
+ **3c.)** **dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan**
   
-  Poin 3a menunjukkan peluang bahwa 6 bayi akan lahir akan lahir di rumah sakit besok. Sedangkan, poin 3b menunjukkan histogram kelahiran 6 bayi yang akan lahir di rumah sakit selama 1 tahun (365 hari). Hasil peluang pada poin 3a jika dikalikan dengan 365(hari), maka hasilnya akan mendekati hasil yang ditampilkan pada histogram poin 3b. Sehingga, dapat disimpulkan bahwa peluang(kemungkinan) 6 bayi akan dilahirkan di rumah sakit besok hasilnya hampir mendekati peluang(kemungkinan) 6 bayi akan dilahirkan di rumah sakit selama setahun(365 hari).
+  Poin 3a menunjukkan peluang bahwa 6 bayi akan lahir akan lahir di rumah sakit besok. Sedangkan, poin 3b menunjukkan histogram kelahiran 6 bayi yang akan lahir di rumah sakit selama 1 tahun (365 hari). Untuk membandingkannya, hasil peluang pada poin 3a dikalikan dengan 365(hari), maka hasilnya akan mendekati hasil yang ditampilkan pada histogram poin 3b. Sehingga, dapat disimpulkan bahwa peluang(kemungkinan) 6 bayi akan dilahirkan di rumah sakit besok hasilnya hampir mendekati peluang(kemungkinan) 6 bayi akan dilahirkan di rumah sakit selama setahun(365 hari). Sehingga, histogram pada poin 3b merepresentasikan peluang dari poin 3a.
 
-
-**3d.)** Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
+**3d.)** **Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.**
   
-  Soal ini menerapkan konsep distribusi Poisson. Pada distribusi poisson, rataan distribusi Poisson (μ), yaitu 'μ = lambda(λ)' dan varians distribusi Poisson (σ²), yaitu 'σ² = lambda(λ)' dimana lambda memiliki nilai `4.5`. Sehingga, didapatkan hasil `μ = 4` dan `σ² =3,2`. 
+  Soal ini menerapkan konsep distribusi Poisson. Pada distribusi poisson, rataan distribusi Poisson (μ), yaitu `μ = lambda(λ)` dan varians distribusi Poisson (σ²), yaitu `σ² = lambda(λ)` dimana lambda memiliki nilai `4.5`. Sehingga, didapatkan hasil `μ = 4.5` dan `σ² =4.5`. 
  
   
 ```
@@ -174,10 +177,13 @@ paste("σ² =", varians)
 ```
 <img width="480" alt="image" src="https://user-images.githubusercontent.com/103252800/195231015-21c887a3-7b20-4b82-bba7-18266ee30125.png">
 
+
+
+
 ## NO. 4
 > **Diketahui nilai x = 2 dan v = 10. Tentukan:** 
   
-  **4a.)** Fungsi Probabilitas dari Distribusi Chi-Square.
+  **4a.)** **Fungsi Probabilitas dari Distribusi Chi-Square.**
   
   Soal ini menerapkan konsep distribusi Chi-Square. Fungsi yang digunakan, yaitu `dchisq(x, v)` dimana `x` merupakan banyak data dan `v` adalah adalah derajat kebebasan. Maka, didapatkan hasil `0.00766415502440505` sebagai Probabilitas dari Distribusi Chi-Square.
   
@@ -191,7 +197,7 @@ paste("Probabilitas =", probabilitas)
 <img width="477" alt="image" src="https://user-images.githubusercontent.com/103252800/195268015-78c61a3b-f66d-4fe5-810f-1128e0571d6b.png">
 
 
-**4b.)** Histogram dari Distribusi Chi-Square dengan 100 data random.
+**4b.)** **Histogram dari Distribusi Chi-Square dengan 100 data random.**
   
   Soal ini menerapkan konsep distribusi Chi-Square. Fungsi yang digunakan, yaitu `hist(rchisq(n, v))` dimana `n` merupakan suatu data random dan `v` merupakan derajat kebebasan. Maka, akan ditampilkan sebuah histogram dari Distribusi Chi-Square.
   
@@ -205,9 +211,9 @@ dengan 100 Data Random", col = "green")
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195269274-f99413bf-09a9-41d0-90d8-e62bc83361ba.png">
 
 
-**4c.)** Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.
+**4c.)** **Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.**
   
-  Soal ini menerapkan konsep distribusi Chi-Square. Digunakan rumus rataan distribusi Chi-Square (μ), yaitu `μ = `v` dan rumus varians distribusi Chi-Square, yaitu (σ²) `σ² = 2*v` dimana `v` merupakan derajat kebebasan. Sehingga, didapatkan hasil `μ = 4` dan `σ² =3,2`. 
+  Soal ini menerapkan konsep distribusi Chi-Square. Digunakan rumus rataan distribusi Chi-Square (μ), yaitu `μ = `v` dan rumus varians distribusi Chi-Square, yaitu (σ²) `σ² = 2*v` dimana `v` merupakan derajat kebebasan. Sehingga, didapatkan hasil `μ = 10` dan `σ² =20`. 
 
 ```
 # Penyelesaian No.4c
@@ -217,7 +223,7 @@ rataan = v
 paste("μ =", rataan)
 #Nilai Varians Distribusi Chi-Square (σ²) :
 varians = 2*v
-paste("σ² =", varians))
+paste("σ² =" ,varians)
 ```
 <img width="480" alt="image" src="https://user-images.githubusercontent.com/103252800/195270170-fa964680-7300-45c2-bfee-1310507d6d04.png">
 
