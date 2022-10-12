@@ -286,7 +286,7 @@ hist(rexp(10000, rate), main ="Distribusi Exponential
 <br>Gunakan set.seed(1)
 <br>Gunakan fungsi bawaan R
   
-   Soal ini menerapkan konsep distribusi Chi-Square. Digunakan rumus rataan distribusi Eksponensial (μ), yaitu menggunakan fungsi `mean(rexp(n, rate))` dan untuk rumus varians distribusi Eksponensial, yaitu menggunakan fungsi `(sd(rexp(n, rate)))` dimana n merupakan bilangan random dan rate merupakan parameter yang nilainya sama dengan lambda(λ). Sehingga, didapatkan hasil `μ = 4` dan `σ² =3,2`. 
+   Soal ini menerapkan konsep distribusi Chi-Square. Digunakan rumus rataan distribusi Eksponensial (μ), yaitu menggunakan fungsi `mean(rexp(n, rate))` dan untuk rumus varians distribusi Eksponensial, yaitu menggunakan fungsi `(sd(rexp(n, rate)))` dimana n merupakan bilangan random dan rate merupakan parameter yang nilainya sama dengan lambda(λ). Sehingga, didapatkan hasil `μ = 0.343558812019206` dan `σ² = 0.0656076521452312`. 
   
 ```
 # Penyelesaian No.5c
@@ -302,5 +302,58 @@ varians = (sd(rexp(n, rate))) ^ 2
 paste("σ² =", varians)
 ```
 <img width="468" alt="image" src="https://user-images.githubusercontent.com/103252800/195278458-3bac7fbe-a2dc-4fda-84b9-b9302ca5d7f3.png">
+
+
+## NO. 6
+> **Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan** 
+  
+  **6a.)** Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot())..
+  
+  Soal ini menerapkan konsep distribusi Normal. Untuk mendapatkan nilai Z-Score fungsi yang digunakan, yaitu `rnorm(n, mean, sd)` dimana `n` merupakan banyak data random, `mean` merupakan rat-rata, dan `sd` merupakan standar deviasi. Sedangkan untuk menampilkan plot data generate randomnya dalam bentuk grafik fungsi yang digunakan, yaitu `plot(zScore)`. Sehingga akan ditampilkan nilai Z-Score dan juga plot data generate randomnya dalam bentuk grafik.
+  
+```
+# Penyelesaian No.6a
+n = 100
+mean = 50
+sd = 8
+
+zScore = rnorm(n, mean, sd)
+zScore
+
+plot(zScore, main="Distribusi normal
+100 nilai random")
+```
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195282818-eb182f04-4395-4ea9-8332-eb680da95b41.png">
+
+**6b.)** Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan: NRP_Nama_Probstat_{Nama Kelas}_DNhistogram
+
+  Soal ini menerapkan konsep distribusi Normal. Fungsi yang digunakan, yaitu `hist(zScore, breaks)` dimana zScore didapatkan dari fungsi `zScore = rnorm(n, mean, sd)' yang mana `n` merupakan banyak data random, `mean` merupakan rat-rata, `sd` merupakan standar deviasi, dan breaks yang telah diketahui nilainya. Maka, akan ditampilkan Histogram dari Distribusi Normal.
+  
+```
+# Penyelesaian No.6b
+n = 100
+mean = 50
+sd = 8
+zScore = rnorm(n, mean, sd)
+breaks = 50
+hist(zScore, breaks, main="5025211229_Fathin Muhashibi Putra_Probstat_A_DNhistogram")
+```
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195284516-e7c079ae-becc-4a19-b243-c7ccbd6dfd54.png">
+
+**6c.)** Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal.
+
+  Soal ini menerapkan konsep distribusi Normal. Untuk mendapatkan nilai varians, fungsi yang digunakan, yaitu `varians = (sd(zScore))^2` atau pangkat dua dari standar deviasi zScore hasil generate random nilai Distribusi Normal. Dimana `sd` merupakan standar deviasi dan nilai Z-Score didapatkan dari fungsi `rnorm(n, mean, sd)` dimana `n` merupakan banyak data random, `mean` merupakan rata-rata, dan `sd` merupakan standar deviasi. Sehingga akan ditampilkan nilai varians yang tidak tetap(berubah-ubah) menyesuaikan dengan nilai random nya.
+```
+# Penyelesaian No.6c
+n = 100
+mean = 50
+sd = 8
+zScore = rnorm(n, mean, sd)
+#Nilai Varians Distribusi Normal (σ²) :
+varians = (sd(zScore))^2
+paste("σ² =", varians)
+```
+<img width="479" alt="image" src="https://user-images.githubusercontent.com/103252800/195287797-c089a555-0012-482b-8a04-38fc99584647.png">
+
 
 
