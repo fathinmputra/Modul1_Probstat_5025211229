@@ -213,7 +213,7 @@ dengan 100 Data Random", col = "green")
 
 **4c.)** **Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.**
   
-  Soal ini menerapkan konsep distribusi Chi-Square. Digunakan rumus rataan distribusi Chi-Square (μ), yaitu `μ = `v` dan rumus varians distribusi Chi-Square, yaitu (σ²) `σ² = 2*v` dimana `v` merupakan derajat kebebasan. Sehingga, didapatkan hasil `μ = 10` dan `σ² =20`. 
+  Soal ini menerapkan konsep distribusi Chi-Square. Digunakan rumus rataan distribusi Chi-Square (μ), yaitu `μ = v` dan rumus varians distribusi Chi-Square (σ²), yaitu `σ² = 2*v` dimana `v` merupakan derajat kebebasan. Sehingga, didapatkan hasil `μ = 10` dan `σ² =20`. 
 
 ```
 # Penyelesaian No.4c
