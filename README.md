@@ -10,7 +10,7 @@
   
   **1a.)** Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi  sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi ? (distribusi Geometrik)
   
-  Soal ini menerapkan konsep distribusi geometrik. Fungsi yang digunakan, yaitu `dgeom(x, p)` dimana `x` merupakan banyaknya orang yang tidak menghadiri acara vaksinasi dan `p` adalah peluang dari kejadian tersebut. Maka, didapatkan hasil `0.1024` sebagai peluang sebelum keberhasilan pertama.
+  Soal ini menerapkan konsep distribusi geometrik. Fungsi yang digunakan, yaitu `dgeom(x, p)` dimana `x` merupakan banyaknya orang yang tidak menghadiri acara vaksinasi dan `p` adalah peluang dari kejadian yang diinginkan. Maka, didapatkan hasil `0.1024` sebagai peluang sebelum keberhasilan pertama.
   
 ```
 # Penyelesaian No.1a
@@ -23,7 +23,7 @@ paste("peluang = ", peluang)
 
   **1b.)** Mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 )
   
-  Soal ini menerapkan konsep distribusi geometrik. Fungsi yang digunakan, yaitu `mean(rgeom(n,p) == x` dimana `n` merupakan banyaknya data random, `p` adalah peluang dari kejadian, dan `x` merupakan banyaknya orang yang tidak menghadiri acara vaksinasi. Maka, didapatkan hasil yang berubah-ubah sesuai perubahan variabel random.
+  Soal ini menerapkan konsep distribusi geometrik. Fungsi yang digunakan, yaitu `mean(rgeom(n,p) == x` dimana `n` merupakan banyaknya data random, `p` adalah peluang dari kejadian yang diinginkan, dan `x` merupakan banyaknya orang yang tidak menghadiri acara vaksinasi. Maka, didapatkan hasil yang berubah-ubah sesuai perubahan variabel random.
   
 ```
 # Penyelesaian No.1b
@@ -47,17 +47,17 @@ paste("mean = ", mean)
 n = 10000
 p = 0.2
 hist(rgeom(n, p), main = 'Histogram Distribusi Geometrik 
-Peluang x=3 Gagal Sebelum Sukses Pertama')
+Peluang Gagal Sebelum Sukses Pertama', col = "green")
 ```
-<img width="955" alt="image" src="https://user-images.githubusercontent.com/103252800/195225760-d6f1ec53-e25e-415b-98c8-ac2ad261e086.png">
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195231255-07370a4c-0fc1-4ac6-ab7c-a3a485eefb39.png">
 
 
   **1e.)** Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
   
-  Soal ini menerapkan konsep distribusi geometrik. Digunakan rumus rataan distribusi geometrik (μ), yaitu `μ = 1/p` dan rumus varians distribusi geometrik (σ²) `σ² = (1-p)/p^2` dimana `p` merupakan peluang kejadian. Sehingga, didapatkan hasil `μ = 5` dan `σ² =20`. 
+  Soal ini menerapkan konsep distribusi geometrik. Digunakan rumus rataan distribusi geometrik (μ), yaitu `μ = 1/p` dan rumus varians distribusi geometrik (σ²) `σ² = (1-p)/p^2` dimana `p` merupakan peluang dari kejadian yang diinginkan. Sehingga, didapatkan hasil `μ = 5` dan `σ² =20`. 
   
 ```
-# -> Penyelesaian No.1e
+# Penyelesaian No.1e
 p = 0.2
 
 # Nilai Rataan Distribusi Geometrik (μ) :
@@ -69,4 +69,108 @@ varians = (1-p)/p^2
 paste("σ² =", varians)
 ```
 <img width="479" alt="image" src="https://user-images.githubusercontent.com/103252800/195224723-ddcc41a1-87cb-4cb5-9702-8cd11549a0d3.png">
+
+
+## NO. 2
+> **Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :** 
+  
+  **2a.)** Peluang terdapat 4 pasien yang sembuh.
+  
+  Soal ini menerapkan konsep distribusi binomial. Fungsi yang digunakan, yaitu `dbinom(x, n, p)` dimana `x` merupakan banyak pasien yang sembuh, `n` merupakan total keseluruhan pasien, dan `p` adalah peluang dari kejadian yang diinginkan. Maka, didapatkan hasil `0.218199401946101` sebagai sebagai peluang 4 pasien yang sembuh.
+  
+```
+# Penyelesaian No.2a
+x = 4
+n = 20
+p = 0.2
+peluang = dbinom(x, n, p)
+paste("peluang =", peluang)
+```
+<img width="480" alt="image" src="https://user-images.githubusercontent.com/103252800/195226996-bfa5d132-28be-40b9-8d08-8a411261a0a3.png">
+
+
+  **2b.)** Gambarkan grafik histogram berdasarkan kasus tersebut.
+
+  Soal ini menerapkan konsep distribusi binomial. Fungsi yang digunakan, yaitu `hist(rbinom(x, n, p)` dimana `x` merupakan banyak pasien yang sembuh, `n` merupakan total keseluruhan pasien, dan `p` adalah peluang dari kejadian yang diinginkan. Sehingga menampilkan Histogram Distribusi Binomial Peluang Sembuh Pasien Penderita Covid19,
+  
+```
+# Penyelesaian No.2b
+x = 4
+n = 20
+p = 0.2
+hist(rbinom(x, n, p), xlab = "x", ylab = "Frequency", main = "Histogram Distribusi Binomial
+Peluang Sembuh Pasien Penderita Covid19", col = "green")
+```
+<img width="959" alt="image" src="https://user-images.githubusercontent.com/103252800/195227687-f13ab8e7-4dc4-41a9-aa1f-95ca48d7cbff.png">
+
+
+  **2c.)** Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Binomial.
+.
+  Soal ini menerapkan konsep distribusi binomial. Digunakan rumus rataan distribusi binomial (μ), yaitu `μ = n*p` dan rumus varians distribusi binomial (σ²) `σ² = n*p*(1-p)` dimana `n` merupakan keseluruhan total pasien dan `p` merupakan peluang dari kejadian yang diinginkan. Sehingga, didapatkan hasil `μ = 4` dan `σ² =3,2`. 
+  
+  
+```
+# Penyelesaian No.2c
+n = 20
+p = 0.2
+#Nilai Rataan Distribusi Binomial (μ) :
+rataan = n*p
+paste("μ =", rataan)
+#Nilai Varians Distribusi Binomial (σ²) :
+varians = n*p*(1-p)
+paste("σ² =", varians)
+```
+<img width="478" alt="image" src="https://user-images.githubusercontent.com/103252800/195228488-bfbe3c24-5b9e-46fe-94a0-ce0a1040c483.png">
+
+
+## NO. 3
+> **Diketahui data dari  sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)** 
+  
+  **3a.)** Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
+  
+  Soal ini menerapkan konsep distribusi Poisson. Fungsi yang digunakan, yaitu `dpois(x, lambda)` dimana `x` merupakan banyak bayi yang akan lahir, dan `lambda(λ)` adalah rata-rata historis bayi yang lahir di rumah sakit. Maka, didapatkan hasil `0.128120143864584` sebagai sebagai peluang 6 bayi akan lahir di rumah sakit.
+  
+```
+# Penyelesaian No.3a
+x = 6
+lambda = 4.5
+peluang = dpois(x, lambda)
+paste("peluang =", peluang)
+```
+<img width="478" alt="image" src="https://user-images.githubusercontent.com/103252800/195229128-27edddb7-139b-42db-b2e4-cd9313694994.png">
+
+ **3b.)** Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
+  
+  Soal ini menerapkan konsep distribusi Poisson. Fungsi yang digunakan, yaitu `hist(rpois(n,lambda)` dimana `n` merupakan banyak nya hari dalam satu tahun dan `lambda(λ)` adalah rata-rata historis bayi yang lahir di rumah sakit. Maka, akan ditampilkan histogram distribusi poisson Peluang Kelahiran Bayi Akan Lahir di Rumah Sakit Selam Setahun(365 hari).
+  
+```
+# Penyelesaian No.3b
+n = 365
+lambda = 4.5
+hist(rpois(n,lambda), main ="Histogram Distribusi Poisson
+Peluang Kelahiran Bayi Akan Lahir di Rumah Sakit Selam Setahun(365 hari)", labels=T, xlab = 'x', col = "green")
+```
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195230232-c9843e5f-0128-4c03-a02e-e50e67dcb48b.png">
+
+ **3c.)** dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
+  
+  Poin 3a menunjukkan peluang bahwa 6 bayi akan lahir akan lahir di rumah sakit besok. Sedangkan, poin 3b menunjukkan histogram kelahiran 6 bayi yang akan lahir di rumah sakit selama 1 tahun (365 hari). Hasil peluang pada poin 3a jika dikalikan dengan 365(hari), maka hasilnya akan mendekati hasil yang ditampilkan pada histogram poin 3b. Sehingga, dapat disimpulkan bahwa peluang(kemungkinan) 6 bayi akan dilahirkan di rumah sakit besok hasilnya hampir mendekati peluang(kemungkinan) 6 bayi akan dilahirkan di rumah sakit selama setahun(365 hari).
+
+
+**3d.)** Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.
+  
+  Soal ini menerapkan konsep distribusi Poisson. Pada distribusi poisson, rataan distribusi Poisson (μ), yaitu 'μ = lambda(λ)' dan varians distribusi Poisson (σ²), yaitu 'σ² = lambda(λ)' dimana lambda memiliki nilai `4.5`. Sehingga, didapatkan hasil `μ = 4` dan `σ² =3,2`. 
+ 
+  
+```
+# Penyelesaian No.3d
+lambda = 4.5
+#Nilai Rataan Distribusi Poisson (μ) :
+rataan = lambda
+paste("μ =", rataan)
+#Nilai Varians Distribusi Poisson (σ²) :
+varians = lambda
+paste("σ² =", varians)
+```
+<img width="480" alt="image" src="https://user-images.githubusercontent.com/103252800/195231015-21c887a3-7b20-4b82-bba7-18266ee30125.png">
 
