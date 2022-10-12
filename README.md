@@ -128,7 +128,7 @@ paste("σ² =", varians)
   
   **3a.)** Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
   
-  Soal ini menerapkan konsep distribusi Poisson. Fungsi yang digunakan, yaitu `dpois(x, lambda)` dimana `x` merupakan banyak bayi yang akan lahir, dan `lambda(λ)` adalah rata-rata historis bayi yang lahir di rumah sakit. Maka, didapatkan hasil `0.128120143864584` sebagai sebagai peluang 6 bayi akan lahir di rumah sakit.
+  Soal ini menerapkan konsep distribusi Poisson. Fungsi yang digunakan, yaitu `dpois(x, lambda)` dimana `x` merupakan banyak bayi yang akan lahir, dan `lambda(λ)` adalah rata-rata historis bayi yang lahir di rumah sakit. Maka, didapatkan hasil `0.128120143864584` sebagai peluang 6 bayi akan lahir di rumah sakit.
   
 ```
 # Penyelesaian No.3a
@@ -173,4 +173,55 @@ varians = lambda
 paste("σ² =", varians)
 ```
 <img width="480" alt="image" src="https://user-images.githubusercontent.com/103252800/195231015-21c887a3-7b20-4b82-bba7-18266ee30125.png">
+
+## NO. 4
+> **Diketahui nilai x = 2 dan v = 10. Tentukan:** 
+  
+  **4a.)** Fungsi Probabilitas dari Distribusi Chi-Square.
+  
+  Soal ini menerapkan konsep distribusi Chi-Square. Fungsi yang digunakan, yaitu `dchisq(x, v)` dimana `x` merupakan banyak data dan `v` adalah adalah derajat kebebasan. Maka, didapatkan hasil `0.00766415502440505` sebagai Probabilitas dari Distribusi Chi-Square.
+  
+```
+# Penyelesaian No.4a
+x = 2
+v = 10
+probabilitas = dchisq(x, v)
+paste("Probabilitas =", probabilitas)
+```
+<img width="477" alt="image" src="https://user-images.githubusercontent.com/103252800/195268015-78c61a3b-f66d-4fe5-810f-1128e0571d6b.png">
+
+
+**4b.)** Histogram dari Distribusi Chi-Square dengan 100 data random.
+  
+  Soal ini menerapkan konsep distribusi Chi-Square. Fungsi yang digunakan, yaitu `hist(rchisq(n, v))` dimana `n` merupakan suatu data random dan `v` merupakan derajat kebebasan. Maka, akan ditampilkan sebuah histogram dari Distribusi Chi-Square.
+  
+```
+# Penyelesaian No.4b
+n = 100
+v = 10
+hist(rchisq(n, v), main="Distribusi Chi-Square 
+dengan 100 Data Random", col = "green")
+```
+<img width="960" alt="image" src="https://user-images.githubusercontent.com/103252800/195269274-f99413bf-09a9-41d0-90d8-e62bc83361ba.png">
+
+
+**4c.)** Histogram dari Distribusi Chi-Square dengan 100 data random.
+  
+  Soal ini menerapkan konsep distribusi Chi-Square. Digunakan rumus rataan distribusi Chi-Sqyare (μ), yaitu `μ = `v` dan rumus varians distribusi Chi-Square, yaitu (σ²) `σ² = 2*v` dimana `v` merupakan derajat kebebasan. Sehingga, didapatkan hasil `μ = 4` dan `σ² =3,2`. 
+  
+Soal ini menerapkan konsep distribusi binomial. Digunakan rumus rataan distribusi binomial (μ), yaitu `μ = n*p` dan rumus varians distribusi binomial (σ²) `σ² = n*p*(1-p)` dimana `n` merupakan keseluruhan total pasien dan `p` merupakan peluang dari kejadian yang diinginkan. Sehingga, didapatkan hasil `μ = 10` dan `σ² =20`. 
+
+```
+# Penyelesaian No.4c
+v = 10
+#Nilai Rataan Distribusi Chi-Square (μ) :
+rataan = v
+paste("μ =", rataan)
+#Nilai Varians Distribusi Chi-Square (σ²) :
+varians = 2*v
+paste("σ² =", varians))
+```
+<img width="480" alt="image" src="https://user-images.githubusercontent.com/103252800/195270170-fa964680-7300-45c2-bfee-1310507d6d04.png">
+
+
 
