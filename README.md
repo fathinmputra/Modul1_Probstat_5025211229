@@ -333,7 +333,7 @@ plot(zScore, main="Distribusi normal
 
 **6b.)** Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan: NRP_Nama_Probstat_{Nama Kelas}_DNhistogram
 
-  Soal ini menerapkan konsep distribusi Normal. Fungsi yang digunakan, yaitu `hist(zScore, breaks)` dimana zScore didapatkan dari fungsi `zScore = rnorm(n, mean, sd)' yang mana `n` merupakan banyak data random, `mean` merupakan rat-rata, `sd` merupakan standar deviasi, dan breaks yang telah diketahui nilainya. Maka, akan ditampilkan Histogram dari Distribusi Normal.
+  Soal ini menerapkan konsep distribusi Normal. Fungsi yang digunakan, yaitu `hist(zScore, breaks)` dimana Z-Score didapatkan dari fungsi `zScore = rnorm(n, mean, sd)` yang mana `n` merupakan banyak data random, `mean` merupakan rata-rata, `sd` merupakan standar deviasi, dan breaks yang telah diketahui nilainya. Maka, akan ditampilkan Histogram dari Distribusi Normal.
   
 ```
 # Penyelesaian No.6b
